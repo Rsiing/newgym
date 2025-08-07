@@ -8,7 +8,6 @@ function Hero() {
                 duration-200 px-4 py-2 rounded-3xl cursor-pointer text-gray-400 lg:text-xl md:text-lg sm:text-base">
                 The next generation of fitness.
             <Link to="/about" className='text-violet-500 font-bold pl-1'>Read more →</Link>
-            
         </button>
         <h1 className='xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl text-4xl text-center my-10 font-extrabold'>The next generation of Fitness applications</h1>
         <h2 className="xl:text-4xl lg:text-3xl md:text-2xl sm:text-xl text-center text-gray-400 pt-4">Use our tools to monitor your workouts and nutrition,

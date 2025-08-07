@@ -14,7 +14,7 @@ function Navbar() {
         <div className='flex items-center lg:gap-12 gap-6 font-semibold lg:text-[32px] text-[24px]'>
             <Link to="/" className='hidden lg:flex'>Home</Link>
             <Link to="/about" className='hidden lg:flex'>About</Link>
-            <Link to="/contact" className='hidden lg:flex'>Contact/FAQ</Link>
+            <Link to="/contact" className='hidden lg:flex'>Contact</Link>
             <Link to="/login" className='px-4 py-2 rounded-xl border-3 border-transparent hover:border-white duration-300 hidden lg:flex'>Log in</Link>
             <Link to="/register" className='px-4 py-2 rounded-xl bg-violet-400 hover:bg-violet-500 duration-200 hidden lg:flex'>Sign up</Link>
             

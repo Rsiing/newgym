@@ -7,26 +7,30 @@ import Footer from './components/Footer'
 import Login from './components/Login'
 import Register from './components/Register'
 import Dashboard from './components/Dashboard'
+import Navdash from './components/Navdash'
 import './App.css'
 
 function AppContent() {
   const location = useLocation();
-  const hideNavAndFooter = location.pathname === '/login' || location.pathname === '/register';
-  const hideNav = location.pathname === '/dashboard';
+  const navAndFooter = location.pathname === '/login' || location.pathname === '/register' || location.pathname === '/dashboard';
+ 
+
+ 
 
   return (
     <>
-      {!hideNavAndFooter && <Navbar />}
-      {hideNav && <Navbar />}
+      {!navAndFooter && <Navbar />}
       <Routes>
+        <>
         <Route path="/" element={<Hero />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        </>
+        <Route path="/dashboard" element={<><Navdash /><Dashboard /><Footer /></>} />
       </Routes>
-      {!hideNavAndFooter && <Footer />}
+      {!navAndFooter && <Footer />}
     </>
   );
 }
