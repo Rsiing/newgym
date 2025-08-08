@@ -19,7 +19,7 @@ function Contact() {
                 <span className="text-violet-400"> Email us.</span> or contact through the social links below</p>
         </div>
         
-        <div className="flex flex-col items-center lg:w-1/2 text-start pt-8">
+        <div className="flex flex-col items-center lg:w-1/2 text-start pt-4">
             <div>
                 <h4 className="lg:text-4xl md:text-3xl sm:text-2xl pb-2">How do I create an account?</h4>
                 <p className="xl:text-2xl lg:text-xl md:text-lg text-gray-400">It is a long established fact that a reader will be distracted 
