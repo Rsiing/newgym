@@ -10,7 +10,7 @@ function Contact() {
         </h2>
     </div>
 
-    <div className="flex flex-col md:flex-row gap-10 lg:w-[70%] lg:justify-between lg:mx-auto mb-20 lg:px-0 px-4 text-center cursor-default">
+    <div className="flex flex-col lg:flex-row gap-10 lg:w-[70%] lg:justify-between lg:mx-auto mb-20 lg:px-0 px-4 text-center cursor-default">
         <div className="flex flex-col lg:w-1/2 text-start">
             <h3 className="xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl pt-4 text-violet-400">
                 Frequently Asked Questions

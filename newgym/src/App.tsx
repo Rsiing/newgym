@@ -12,7 +12,7 @@ import './App.css'
 
 function AppContent() {
   const location = useLocation();
-  const navAndFooter = location.pathname === '/login' || location.pathname === '/register' || location.pathname === '/dashboard';
+  const navAndFooter = location.pathname === '/login' || location.pathname === '/register' || location.pathname === '/dashboard' || location.pathname === '/contactdash';
  
 
  
@@ -22,13 +22,13 @@ function AppContent() {
       {!navAndFooter && <Navbar />}
       <Routes>
         <>
-        <Route path="/" element={<Hero />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/" element={<><Hero /><About /></>} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         </>
         <Route path="/dashboard" element={<><Navdash /><Dashboard /><Footer /></>} />
+        <Route path='/contactdash' element={<><Navdash /><Contact /></>} />
       </Routes>
       {!navAndFooter && <Footer />}
     </>
