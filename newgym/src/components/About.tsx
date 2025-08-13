@@ -1,7 +1,21 @@
-
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 function About() {
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { margin: "-100px" });
+  
   return (
+    
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 60 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      id="aboutSection"
+    >  
+
     <div id="aboutSection">
         <div className='flex flex-col  p-20 lg:w-[80%] mx-auto cursor-default'>
             <span className=" text-violet-500 font-semibold xl:text-4xl lg:text-3xl md:text-2xl sm:text-xl">
@@ -40,6 +54,7 @@ function About() {
 
       </div>
     </div>
+      </motion.div>
   )
 }
 
