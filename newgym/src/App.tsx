@@ -22,8 +22,7 @@ function AppContent() {
       {!navAndFooter && <Navbar />}
       <Routes>
         <>
-        <Route path="/" element={<><Hero /><About /></>} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={<><Hero /><About /><Contact /></>} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         </>

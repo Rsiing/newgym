@@ -15,9 +15,9 @@ function Hero() {
   return (
     <>
     <motion.div
-      initial={{ opacity: 0, y: 100 }}
+      initial={{ opacity: 0, y: 60 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ type: "spring" }}>
+      transition={{ type: "spring", duration: 1 }}>
       <div className='flex flex-col justify-center items-center p-20 lg:w-[80%] mx-auto my-20 cursor-default'>
           <button className="border-3 border-gray-600 hover:border-gray-500 
                   duration-200 px-4 py-2 rounded-3xl cursor-pointer text-gray-400 lg:text-xl md:text-lg sm:text-base">

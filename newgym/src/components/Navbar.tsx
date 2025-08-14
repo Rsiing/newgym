@@ -11,9 +11,9 @@ function Navbar() {
     <>
     <div className='flex justify-between items-center text-white p-4 lg:text-[40px] text-[32px] cursor-default'>   
         <Link to='/'>FitrLyfe</Link>
-        <div className='flex items-center lg:gap-12 gap-6 font-semibold lg:text-[32px] text-[24px]'>
+        <div className='flex items-center gap-6 font-semibold lg:text-[32px] text-[24px]'>
             
-            <Link to="/contact" className=' hidden lg:flex'>Contact</Link>
+            
             <Link to="/login" className='px-4 py-2 rounded-xl bg-violet-500 hover:bg-violet-600 duration-200 hidden lg:flex'>Log in</Link>
             <Link to="/register" className='px-4 py-2 rounded-xl bg-violet-500 hover:bg-violet-600 duration-200 hidden lg:flex'>Sign up</Link>
             
