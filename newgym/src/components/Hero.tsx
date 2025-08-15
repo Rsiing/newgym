@@ -10,6 +10,13 @@ function Hero() {
     }
   }
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contactSection');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth'})
+    }
+  }
+
   
 
   return (
@@ -30,7 +37,7 @@ function Hero() {
           </h2>
           <div className="flex gap-4 mt-10 font-bold xl:text-2xl lg:text-xl text-base">
               <Link to="/register" className="px-4 py-2 bg-violet-500 hover:bg-violet-600 duration-200 rounded-xl cursor-pointer">Get started</Link>
-              <span onClick={scrollToAbout} className="cursor-pointer flex items-center">Learn More →</span>
+              <span onClick={scrollToContact} className="cursor-pointer flex items-center">Contact us →</span>
           </div>
       </div>
     </motion.div>

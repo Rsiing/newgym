@@ -6,15 +6,34 @@ function Contact() {
     const ref = useRef(null);
     const isInView = useInView(ref, { margin: "-100px" });
 
+    const contactBox = [
+        {
+            question: "How do I create an account?",
+            answer: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum"
+        },
+        {
+            question: "What features does the app offer?",
+            answer: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum"
+        },
+        {
+            question: "How can I reset my password?",
+            answer: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum"
+        },
+        {
+            question: "Is there a mobile app available?",
+            answer: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum"
+        }
+    ];
+
    
-  return (
+  return ( 
       
-    <>
     <motion.div
       ref={ref}
       initial={{ opacity: 0, y: 60 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
       transition={{ duration: 0.75, ease: "easeOut" }}>
+    <div id="contactSection">
 
         <div className='flex flex-col p-20 lg:w-[80%] mx-auto cursor-default'>
             <span className=" text-violet-500 font-semibold xl:text-4xl lg:text-3xl md:text-2xl sm:text-xl">
@@ -27,14 +46,14 @@ function Contact() {
         </div>
     
     
-        <div className="grid xl:grid-cols-3 xl:grid-rows-4 lg:grid-cols-2 lg:grid-rows-6 gap-6 lg:w-[80%] lg:mx-auto mx-4 mb-20 text-gray-400 text-center cursor-default">
-    
+        <div className="grid xl:grid-cols-3 xl:grid-rows-4 lg:grid-cols-2 lg:grid-rows-2 gap-6 lg:w-[80%] lg:mx-auto mx-4 mb-20 text-gray-400 text-center cursor-default">
+    <motion.button whileHover={{ scale: 1.4 }} whileTap={{ scale: 0.1 }}>
           <div className='shadow-xl bg-[#1d1d1d] xl:row-span-2 rounded-3xl p-10 flex flex-col items-center justify-center text-center'>
             <h3 className='text-violet-400 mt-8 xl:text-4xl lg:text-3xl md:text-2xl text-xl font-bold'>How do I create an account?</h3>
             <p className='mt-4 lg:text-xl md:text-lg'>It is a long established fact that a reader will be distracted 
                     by the readable content of a page when looking at its layout. The point of using Lorem Ipsum</p>
           </div>
-    
+    </motion.button>
           <div className='shadow-xl bg-[#1d1d1d] xl:row-span-2 rounded-3xl p-10 flex flex-col items-center justify-center text-center'>
             <h3 className='text-violet-400 mt-8 xl:text-4xl lg:text-3xl md:text-2xl text-xl font-bold'>What features does the app offer?</h3>
             <p className='mt-4 lg:text-xl md:text-lg'>It is a long established fact that a reader will be distracted 
@@ -65,10 +84,19 @@ function Contact() {
             
           </div>
     </div>
+    </div>
     </motion.div>
-    </>
     
   )
 }
 
 export default Contact
+/*
+{contactBox.map((item, index) => (
+          <div key={index} className='flex flex-col p-20 lg:w-[80%] mx-auto cursor-default'>
+              <h2 className='text-violet-500 font-semibold xl:text-3xl lg:text-2xl md:text-xl sm:text-lg text-base'>
+                  {item.question}
+              </h2>
+              <p className='mt-4 lg:text-xl md:text-lg'>{item.answer}</p>
+          </div>
+      ))}*/

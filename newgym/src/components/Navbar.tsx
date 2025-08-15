@@ -14,8 +14,8 @@ function Navbar() {
         <div className='flex items-center gap-6 font-semibold lg:text-[32px] text-[24px]'>
             
             
-            <Link to="/login" className='px-4 py-2 rounded-xl bg-violet-500 hover:bg-violet-600 duration-200 hidden lg:flex'>Log in</Link>
             <Link to="/register" className='px-4 py-2 rounded-xl bg-violet-500 hover:bg-violet-600 duration-200 hidden lg:flex'>Sign up</Link>
+            <Link to="/login" className='px-4 py-2 rounded-xl bg-violet-500 hover:bg-violet-600 duration-200 hidden lg:flex'>Log in</Link>
             
             <FaBars onClick={toggleMenu} className='cursor-pointer lg:text-[56px] text-[48px] flex lg:hidden' />
         </div>
@@ -23,11 +23,11 @@ function Navbar() {
 
     <div>
         {isOpen && (
-            <ul className='flex flex-col lg:flex-row justify-around items-center pt-10 gap-10 text-[24px] font-semibold lg:hidden'>
+            <ul className='flex flex-col  lg:flex-row  items-center gap-6 text-[24px] font-semibold lg:hidden'>
                 
                 <Link to="/login" className='px-4 py-2 rounded-xl bg-violet-500 hover:bg-violet-600 duration-200'>Log in</Link>
                 <Link to="/register" className='px-4 py-2 rounded-xl bg-violet-500 hover:bg-violet-600 duration-200'>Sign up</Link>
-                <Link to="/contact">Contact</Link>
+                
             </ul>
         )}
     </div>
