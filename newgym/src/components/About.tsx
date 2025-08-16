@@ -6,6 +6,24 @@ function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, { margin: "-100px" });
   
+
+    function FadeInBox({ children, delay = 0 }) {
+    const boxRef = useRef(null);
+    const boxInView = useInView(boxRef, { margin: "-100px" });
+    return (
+      <motion.div
+        ref={boxRef}
+        initial={{ opacity: 0, y: 40 }}
+        animate={boxInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+        transition={{ duration: 0.7, delay, ease: "easeOut" }}
+        className="shadow-xl bg-[#1d1d1d] rounded-3xl p-10 flex flex-col items-center justify-center text-center"
+      >
+        {children}
+      </motion.div>
+    );
+  }
+    
+
   return (
     
     <motion.div
@@ -26,7 +44,7 @@ function About() {
                     Everything you need in one application
             </h1>
         </div>
-
+        
         <div className="grid xl:grid-cols-4 md:grid-cols-2 md:grid-rows-6 h-200 gap-6 lg:w-[80%] lg:mx-auto mx-4 mb-20 text-gray-400 text-center cursor-default">
           <div className='shadow-xl bg-[#1d1d1d] rounded-3xl xl:col-span-4 xl:row-span-2 md:col-span-2 md:row-span-2 flex flex-col items-center justify-center text-center'>
             <h3 className='text-violet-400 mt-8 lg:text-4xl md:text-3xl text-2xl font-bold'>Track Your Progress</h3>
